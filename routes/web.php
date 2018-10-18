@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index')->name('index');
+// Route::get('/operations/{operation_id}', 'OperationController@show');
+Route::resource('operations', 'OperationController');

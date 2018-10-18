@@ -8,11 +8,15 @@
       <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
       <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <title>{{ config('app.name', 'OneCert OID') }}</title>
+      @yield('styles')
   </head>
   <body class="font-sans antialiased text-grey-darkest leading-tight">
-    <div id="app">
+  @include('layouts.navbar')
+  <div id="app">
       @yield('body')
     </div>
+    @include('layouts.footer')
     <script src="{{ mix('js/app.js') }}"></script>
+    @yield('scripts')
   </body>
 </html>
